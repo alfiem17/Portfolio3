@@ -91,7 +91,7 @@ if ($_SERVER['REQUEST_METHOD'] === "POST") {
                 header("Location: edit.php");
 
             } catch (PDOException $ex) {
-                $message = "An unexpected error has occurred: " . $ex->getMessage();
+                $message = "An unexpected error has occurred";
             }
         } else {
             $message = "Please select a key language";
