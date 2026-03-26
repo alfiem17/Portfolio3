@@ -1,0 +1,50 @@
+.view-page {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: center;
+    min-height: inherit
+}
+
+.view-container {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+
+    gap: 20px;
+    padding: 40px 40px;
+
+    margin-top: 40px;
+    margin-bottom: 40px;
+
+    border-radius: 5px;
+    background-color: var(--secondary);
+}
+
+.info {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.cv-email {
+    display: flex;
+    flex-direction: row;
+    gap: 5px;
+}
+
+.cv-summary {
+    width: 800px;
+}
+
+.cv-list {
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+    margin-top: 5px;
+    margin-bottom: 15px;
+}

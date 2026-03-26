@@ -1,0 +1,54 @@
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: var(--header-height);
+    background-color: var(--secondary);
+    padding: 0 50px;
+    z-index: 100;
+}
+
+.nav-menu {
+    display: flex;
+    gap: 20px;
+}
+
+.search-form {
+    display: flex;
+    align-items: center;
+    height: 40px;   /* desired height for both input and button */
+    gap: 10px;
+}
+
+.search-input {
+    width: 400px;
+    height: 100%;
+    padding: 0 8px;
+    border-radius: 4px;
+    border: 0;
+    box-sizing: border-box;
+    font-size: 16px;
+}
+
+.search-submit {
+    height: 75%;
+    background: transparent;
+    border: 0;
+    
+}
+
+.logout {
+    border: 0;
+    text-decoration: none;
+    color: inherit;
+    background-color: transparent;
+    font-size: 16px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+.logout:hover {
+    text-decoration: underline;
+}

@@ -1,0 +1,74 @@
+.edit-page {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: center;
+    min-height: inherit
+}
+
+.edit-container {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+
+    gap: 20px;
+    padding: 40px 40px;
+    
+    margin-top: 40px;
+    margin-bottom: 40px;
+
+    border-radius: 5px;
+    background-color: var(--secondary);
+}
+
+.section {
+    display: flex;
+    flex-direction: row;
+}
+
+.section-input {
+    width: 350px;
+}
+
+.section-label {
+    font-size: 14px;
+    width: 100px;
+}
+
+.edit-submit {
+    padding: 10px 20px;
+}
+
+.summary {
+    height: 150px;
+    resize: none;
+}
+
+.languages {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.education {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.links {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.options {
+    display: flex;
+    flex-direction: row;
+    gap: 5px;
+    justify-content: space-between;
+}

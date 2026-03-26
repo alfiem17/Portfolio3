@@ -1,0 +1,35 @@
+.search-container {
+    margin: 40px;
+}
+
+.search-topbar {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+}
+
+.search-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    width: auto;
+    height: auto;
+}
+
+.cv-container {
+    border: 1px solid var(--secondary);
+    border-radius: 5px;
+    padding: 40px 20px;
+    width: auto;
+}
+
+.cv-name {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.cv-email {
+    color: var(--header-color);
+}
