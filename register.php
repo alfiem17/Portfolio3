@@ -2,6 +2,11 @@
 include_once('include/auth.php');
 include_once('include/connect_db.php');
 
+if ($user) {
+    header("Location: index.php");
+    exit();
+}
+
 $name = null;
 $email = null;
 $password = null;

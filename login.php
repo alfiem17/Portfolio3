@@ -1,7 +1,8 @@
 <?php
 include_once('include/connect_db.php');
 include_once('include/auth.php');
-if (isset($_SESSION['user_id'])) {
+
+if ($user) {
     header("Location: index.php");
     exit();
 }
@@ -19,10 +20,10 @@ if ($_SERVER['REQUEST_METHOD'] === "POST") {
         try {
             $stmt = $conn->prepare("SELECT user_id, password_hash FROM users WHERE email = ?");
             $stmt->execute([$email]);
-            $user = $stmt->fetch(PDO::FETCH_ASSOC);
+            $userFound = $stmt->fetch(PDO::FETCH_ASSOC);
 
-            if ($user && password_verify($password, $user["password_hash"])) {
-                $_SESSION["user_id"] = $user['user_id'];
+            if ($userFound && password_verify($password, $userFound["password_hash"])) {
+                $_SESSION["user_id"] = $userFound['user_id'];
                 header("Location: edit.php");
                 exit();
             } else {

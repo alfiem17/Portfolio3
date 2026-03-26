@@ -1,16 +1,15 @@
 <?php
 include_once('include/connect_db.php');
 include_once('include/auth.php');
-include_once('include/get_user.php');
 include_once('include/get_cv.php');
 
-$user_id = $_SESSION['user_id'] ?? null;
-$user = $user_id ? get_user($user_id) : null;
-$user_cv = $user_id ? get_cv($user_id) : null;
-if (!$user || !$user_cv) {
+if (!$user) {
     header("Location: index.php");
     exit();
 }
+
+$user_id = $user['user_id'];
+$user_cv = get_cv($user_id);
 
 $message = "";
 

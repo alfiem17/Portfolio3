@@ -1,8 +1,18 @@
 <?php
 
+include('get_user.php');
+
 if (session_status() === PHP_SESSION_NONE) {
     session_start();
 }
+
+if(!empty($_SESSION['user_id'])) {
+    $user = get_user($_SESSION['user_id']);
+}
+else {
+    $user = null;
+}
+
 if (empty($_SESSION['csrf_token'])) {
     $_SESSION['csrf_token'] = bin2hex(random_bytes(32));
 }

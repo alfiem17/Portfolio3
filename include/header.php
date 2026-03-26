@@ -1,9 +1,6 @@
 <?php
-include_once('get_user.php');
 include_once('auth.php');
 
-$user_id = $_SESSION['user_id'] ?? null;
-$user = $user_id ? get_user($user_id) : null;
 ?>
 <header class="header">
     <nav class="nav-menu">

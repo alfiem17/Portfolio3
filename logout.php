@@ -1,6 +1,10 @@
 <?php
-
 include_once('include/auth.php');
+
+if (!$user) {
+    header("Location: index.php");
+    exit();
+}
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     if(!validateCSRFToken($_POST['csrf_token'])) {
